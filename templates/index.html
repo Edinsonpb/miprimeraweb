@@ -1,1 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Control App</title>
+</head>
+<body>
+    <h1>Bienvenido al cronograma legal y tributario</h1>
+    {% if session.logged_in %}
+        <p><a href="/logout">Cerrar sesión</a></p>
+    {% else %}
+        <p><a href="/login">Iniciar sesión</a> o <a href="/signup">Registrarse</a></p>
+    {% endif %}
+</body>
+</html>
